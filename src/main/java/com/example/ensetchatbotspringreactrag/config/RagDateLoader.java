@@ -25,7 +25,8 @@ public class RagDateLoader {
     @Bean
     public SimpleVectorStore simpleVectorStore(EmbeddingModel embeddingModel){
         SimpleVectorStore vectorStore = new SimpleVectorStore(embeddingModel);
-        String fileStore = Path.of("src","main","resources","store").toAbsolutePath()+"/"+storeFile;
+        String fileStore = Path.of("src","main","resources","store")
+                .toAbsolutePath()+"/"+storeFile;
         File file = new File(fileStore);
         if (!file.exists()){
             PagePdfDocumentReader pdfDocumentReader =
