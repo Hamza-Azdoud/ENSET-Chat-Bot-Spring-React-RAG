@@ -19,7 +19,7 @@ import java.util.List;
 public class RagDateLoader {
     @Value("classpath:/pdfs/cv.pdf")
     private Resource pdfResource;
-    @Value("store-data-v1.json")
+    @Value("store-data-v2.json")
     private String storeFile;
 
     @Bean
